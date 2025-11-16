@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    float b = 5.5;
+    char c = 'A';
+    double d = 12.3456;
+
+    int *iptr = &a;
+    float *fptr = &b;
+    char *cptr = &c;
+    double *dptr = &d;
+
+    // int pointer
+    printf("Pointer: iptr | Points to variable: a\n");
+    printf("Self address of iptr: %p\n", &iptr);
+    printf("Address stored in iptr: %p\n", iptr);
+    printf("Value at a: %d\n\n", *iptr);
+
+    // float pointer
+    printf("Pointer: fptr | Points to variable: b\n");
+    printf("Self address of fptr: %p\n", &fptr);
+    printf("Address stored in fptr: %p\n", fptr);
+    printf("Value at b: %.2f\n\n", *fptr);
+
+    // char pointer
+    printf("Pointer: cptr | Points to variable: c\n");
+    printf("Self address of cptr: %p\n", &cptr);
+    printf("Address stored in cptr: %p\n", cptr);
+    printf("Value at c: %c\n\n", *cptr);
+
+    // double pointer
+    printf("Pointer: dptr | Points to variable: d\n");
+    printf("Self address of dptr: %p\n", &dptr);
+    printf("Address stored in dptr: %p\n", dptr);
+    printf("Value at d: %.4lf\n", *dptr);
+
+    return 0;
+}

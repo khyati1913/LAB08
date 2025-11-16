@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int a = 10;
+    float b = 3.5;
+    char c = 'A';
+
+    int *p1 = &a;
+    float *p2 = &b;
+    char *p3 = &c;
+
+    printf("Original Address of p1 = %d\n", (int)p1);
+    printf("Original Address of p2 = %d\n", (int)p2);
+    printf("Original Address of p3 = %d\n", (int)p3);
+
+    p1++;   // increment pointer
+    p2++;
+    p3++;
+
+    printf("\nAfter Increment:\n");
+    printf("Address of p1 = %d\n", (int)p1);
+    printf("Address of p2 = %d\n", (int)p2);
+    printf("Address of p3 = %d\n", (int)p3);
+
+    p1--;   // decrement pointer
+    p2--;
+    p3--;
+
+    printf("\nAfter Decrement (Back to original):\n");
+    printf("Address of p1 = %d\n", (int)p1);
+    printf("Address of p2 = %d\n", (int)p2);
+    printf("Address of p3 = %d\n", (int)p3);
+
+    return 0;
+}

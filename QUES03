@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void changeValues(int *x, char *y) {   // function with pointer parameters
+    *x = *x + 5;      // modifying integer value
+    *y = 'Z';         // modifying char value
+}
+
+int main() {
+    int a = 10;
+    char b = 'A';
+
+    printf("Before Function:\n");
+    printf("a = %d\n", a);
+    printf("b = %c\n", b);
+
+    changeValues(&a, &b);   // passing addresses (call by reference)
+
+    printf("\nAfter Function:\n");
+    printf("a = %d\n", a);
+    printf("b = %c\n", b);
+
+    return 0;
+}
